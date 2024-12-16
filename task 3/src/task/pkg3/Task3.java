@@ -24,20 +24,19 @@ public class Task3 {
         Scanner sc = new Scanner(System.in); // Its create object of scanner class
 
         // Input size of the square matrix
-        System.out.print("Enter size of the row matrix: ");
-        int row = sc.nextInt();// we use sc to access function of scanner class.Here function is nextint
+        System.out.print("Enter size square matrix: ");
+        int size = sc.nextInt();// we use sc to access function of scanner class.Here function is nextint
 
-        System.out.print("Enter size of the coloum matrix: ");
-        int col = sc.nextInt();
+       
         
 // Initialize the square matrix
-        int[][] matrix = new int[row][col];
+        int[][] matrix = new int[size][size];
 
         // Input elements row by row
-        System.out.println("Enter elements :");
+        System.out.println("Enter elements row by row :");
         
-                for (int i = 0; i < row; i++) {       
-            for (int j = 0; j< col; j++) {
+                for (int i = 0; i < size; i++) {       
+            for (int j = 0; j< size; j++) {
                 matrix[i][j] = sc.nextInt();
                        }
         }
@@ -47,8 +46,8 @@ public class Task3 {
         
         // To display the matrix in 2D Form
 
-for(int i=0; i<row; i++){
-	for(int j=0; j<col; j++){
+for(int i=0; i<size; i++){
+	for(int j=0; j<size; j++){
 		System.out.print(matrix[i][j]+"  ");
 	}
 		System.out.println("");
@@ -61,11 +60,11 @@ for(int i=0; i<row; i++){
         int mainDiagonalSum = 0;
         int secondaryDiagonalSum = 0;
         // Calculate the diagonal sums
-        for (int i = 0; i < row; i++) {
-            for(int j=0; j<col; j++){
+        for (int i = 0; i < size; i++) {
+            for(int j=0; j<size; j++){
             if(i==j){
             mainDiagonalSum += matrix[i][i]; // Main diagonal
-            secondaryDiagonalSum += matrix [i][col-i-1];//Secondary Diagonal 
+            secondaryDiagonalSum += matrix [i][size-i-1];//Secondary Diagonal 
              }
             }
         }

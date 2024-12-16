@@ -77,7 +77,7 @@ public class Task4 {
                 System.out.println(matrix[i][left]);
             }
             left++; 
-        }    
+        }   // sort the printing
     }
     
 }

@@ -2,13 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package task5;
+package task.pkg1;
+
 import java.util.Scanner;
+
 /**
  *
  * @author paolo
  */
-public class Task5 {
+public class Task1 {
 
     /**
      * @param args the command line arguments
@@ -17,12 +19,13 @@ public class Task5 {
         // TODO code application logic here
         System.out.println("hello");
         
+        
         Scanner sc = new Scanner(System.in); // Its create object of scanner class
 
         // Input size of the square matrix
         System.out.print("Enter size of the Array: ");
         int size = sc.nextInt();// we use sc to access function of scanner class.Here function is nextint
-        int swapNum = 0;
+        boolean found = false;
         int [] array = new int [size];
         
         System.out.println("Enter elements :");
@@ -30,33 +33,18 @@ public class Task5 {
         for(int i=0; i<size; i++){
             array[i] = sc.nextInt();
         }
-        for (int i=0; i<size; i++){
-            System.out.println(array[i]+" ");//it should print in a single row 
-        }
-        boolean swap =true;
-        while(swap){
-            swap=false;
-            for (int i =0; i<size-1; i++){
-                if (array[i]>array[i+1]){
-                    swap=true;
-                    swapNum++;
-                    int temp = array[i];
-                    array[i] = array[i+1];
-                    array[i+1]=temp;
-                   
+        
+        for (int i=0; i<array.length ; i++ ){
+            for (int j = i+1; j<array.length; j++){
+                if (array[i]== array[j]){
+                    System.out.println("repeted number: " + array[i] );
+                    found = true;
                 }
-                
             }
-            
+                
         }
-        
-        System.out.println("number of Swaps are: " + swapNum);
-        for (int i=0; i<size; i++){
-            System.out.println("sorted array is: " + array[i]);
-        }// sort print 
-        
-        
-        
-    }
+        if (found == false)
+            System.out.println("no repeted number found");
+    }// if you input the same number for all the time it will print a lot of time the same number 
     
 }
