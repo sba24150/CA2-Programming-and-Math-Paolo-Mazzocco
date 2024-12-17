@@ -21,30 +21,37 @@ public class Task1 {
         
         
         Scanner sc = new Scanner(System.in); // Its create object of scanner class
+        try{
+            
+            // Input size of the square matrix
+            System.out.print("Enter size of the Array: ");
+            int size = sc.nextInt();// we use sc to access function of scanner class.Here function is nextint
+            boolean found = false;
+            int [] array = new int [size];
+            if (size<=0){
+                System.out.println("Entered number not valid ");
+                }else{
+                System.out.println("Enter elements :");
 
-        // Input size of the square matrix
-        System.out.print("Enter size of the Array: ");
-        int size = sc.nextInt();// we use sc to access function of scanner class.Here function is nextint
-        boolean found = false;
-        int [] array = new int [size];
-        
-        System.out.println("Enter elements :");
-        
-        for(int i=0; i<size; i++){
-            array[i] = sc.nextInt();
-        }
-        
-        for (int i=0; i<array.length ; i++ ){
-            for (int j = i+1; j<array.length; j++){
-                if (array[i]== array[j]){
-                    System.out.println("repeted number: " + array[i] );
-                    found = true;
+                for(int i=0; i<size; i++){
+                    array[i] = sc.nextInt();
                 }
-            }
-                
-        }
-        if (found == false)
-            System.out.println("no repeted number found");
+
+                for (int i=0; i<array.length ; i++ ){
+                    for (int j = i+1; j<array.length; j++){
+                        if (array[i]== array[j]){
+                            System.out.println("repeted number: " + array[i] );
+                            found = true;
+                        }
+                    }
+
+                }
+                if (found == false)
+                    System.out.println("no repeted number found");
+                }
+        }catch (Exception e) {
+        System.out.println("User input is not a number.");
+    }
     }// if you input the same number for all the time it will print a lot of time the same number 
     
 }

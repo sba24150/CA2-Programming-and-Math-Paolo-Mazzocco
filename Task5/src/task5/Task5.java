@@ -31,8 +31,9 @@ public class Task5 {
             array[i] = sc.nextInt();
         }
         for (int i=0; i<size; i++){
-            System.out.println(array[i]+" ");//it should print in a single row 
+            System.out.print(array[i]+" ");
         }
+        System.out.println(" ");
         boolean swap =true;
         while(swap){
             swap=false;
@@ -42,21 +43,14 @@ public class Task5 {
                     swapNum++;
                     int temp = array[i];
                     array[i] = array[i+1];
-                    array[i+1]=temp;
-                   
-                }
-                
-            }
-            
+                    array[i+1]=temp; 
+                }  
+            }  
         }
-        
         System.out.println("number of Swaps are: " + swapNum);
+        System.out.println("Sorted array: ");
         for (int i=0; i<size; i++){
-            System.out.println("sorted array is: " + array[i]);
-        }// sort print 
-        
-        
-        
-    }
-    
+            System.out.print(array[i] + ",");
+        }// sort print   
+    }   
 }

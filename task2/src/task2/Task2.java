@@ -17,28 +17,35 @@ public class Task2 {
         // TODO code application logic here
         System.out.println("Hello");
         
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the size of the table");
-        int size;
-        
-        size = sc.nextInt();
-                        
-        int[] [] matrix = new int [size] [size];
-        
-        for (int i=0; i<size; i++ ){
-            for (int j=0; j<size; j++ ){
-                matrix [i][j]= (i+1)*(j+1) ;
-            }
-        }
-        System.out.println("Multiplication Table");
-        for (int i =0; i<size; i++){
-            for(int j =0; j<size; j++){
-                System.out.print(matrix[i][j]+ " ");
-                
-            }
-            System.out.println(" ");// it is not pinting the lines ma every single number
-        }
-        
+        try{
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter the size of the table :");
+            int size;
+            
+            size = sc.nextInt();
+            if (size<=0){
+                System.out.println("Entered number not valid ");
+                    }else{
+
+                int[] [] matrix = new int [size] [size];
+
+                for (int i=0; i<size; i++ ){
+                    for (int j=0; j<size; j++ ){
+                        matrix [i][j]= (i+1)*(j+1) ;
+                    }
+                }
+                System.out.println("Multiplication Table");
+                for (int i =0; i<size; i++){
+                    for(int j =0; j<size; j++){
+                        System.out.print(matrix[i][j]+ " ");
+
+                    }
+                    System.out.println(" ");// it is not pinting the lines ma every single number
+                }
+            }    
+        }catch (Exception e) {
+        System.out.println("User input is not a numer.");
+    }
         
     }
     

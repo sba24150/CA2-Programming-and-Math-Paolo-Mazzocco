@@ -26,7 +26,7 @@ public class Task4 {
         System.out.print("Enter size of the coloum matrix: ");
         int col = sc.nextInt();
         
-// Initialize the square matrix
+        // Initialize the square matrix
         int[][] matrix = new int[row][col];
         int [][] spiral = new int [row][col];
         // Input elements row by row
@@ -37,10 +37,6 @@ public class Task4 {
                 matrix[i][j] = sc.nextInt();
                        }
         }
-    //    [1  2  3]
-     //   [4  5  6]
-      //  [7  8  9]
-        
         // To display the matrix in 2D Form
 
         for(int i=0; i<row; i++){
