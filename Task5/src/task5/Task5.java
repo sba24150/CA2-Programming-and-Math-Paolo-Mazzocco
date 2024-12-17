@@ -18,39 +18,47 @@ public class Task5 {
         System.out.println("hello");
         
         Scanner sc = new Scanner(System.in); // Its create object of scanner class
+        
+            try{
+            // Input size of the square matrix
+            System.out.print("Enter size of the Array: ");
+            int size = sc.nextInt();// we use sc to access function of scanner class.Here function is nextint
+            int swapNum = 0;
+            int [] array = new int [size];
+            if (size<=0){
+                System.out.println("Entered number not valid ");
+                    }else{
 
-        // Input size of the square matrix
-        System.out.print("Enter size of the Array: ");
-        int size = sc.nextInt();// we use sc to access function of scanner class.Here function is nextint
-        int swapNum = 0;
-        int [] array = new int [size];
-        
-        System.out.println("Enter elements :");
-        
-        for(int i=0; i<size; i++){
-            array[i] = sc.nextInt();
-        }
-        for (int i=0; i<size; i++){
-            System.out.print(array[i]+" ");
-        }
-        System.out.println(" ");
-        boolean swap =true;
-        while(swap){
-            swap=false;
-            for (int i =0; i<size-1; i++){
-                if (array[i]>array[i+1]){
-                    swap=true;
-                    swapNum++;
-                    int temp = array[i];
-                    array[i] = array[i+1];
-                    array[i+1]=temp; 
-                }  
-            }  
-        }
-        System.out.println("number of Swaps are: " + swapNum);
-        System.out.println("Sorted array: ");
-        for (int i=0; i<size; i++){
-            System.out.print(array[i] + ",");
-        }// sort print   
+                System.out.println("Enter elements :");
+
+                for(int i=0; i<size; i++){
+                    array[i] = sc.nextInt();
+                }
+                for (int i=0; i<size; i++){
+                    System.out.print(array[i]+" ");
+                }
+                System.out.println(" ");
+                boolean swap =true;
+                while(swap){
+                    swap=false;
+                    for (int i =0; i<size-1; i++){
+                        if (array[i]>array[i+1]){
+                            swap=true;
+                            swapNum++;
+                            int temp = array[i];
+                            array[i] = array[i+1];
+                            array[i+1]=temp; 
+                        }  
+                    }  
+                }
+                System.out.println("Number of Swaps are: " + swapNum);
+                System.out.print("Sorted array: ");
+                for (int i=0; i<size; i++){
+                    System.out.print(array[i] + " ");
+                }
+            }
+        }catch (Exception e) {
+        System.out.println("User input is not a number.");
+    }         
     }   
 }

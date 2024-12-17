@@ -17,8 +17,9 @@ public class Task2 {
         // TODO code application logic here
         System.out.println("Hello");
         
+        Scanner sc = new Scanner(System.in);
         try{
-            Scanner sc = new Scanner(System.in);
+            
             System.out.println("Enter the size of the table :");
             int size;
             

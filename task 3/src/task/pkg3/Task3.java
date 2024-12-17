@@ -56,19 +56,17 @@ public class Task3 {
                 int secondaryDiagonalSum = 0;
                 // Calculate the diagonal sums
                 for (int i = 0; i < size; i++) {
-                    for(int j=0; j<size; j++){
-                    if(i==j){
+                    
                     mainDiagonalSum += matrix[i][i]; // Main diagonal
                     secondaryDiagonalSum += matrix [i][size-i-1];//Secondary Diagonal 
                      }
-                    }
-                }
+                    
                 // Output results
                 System.out.println("Main Diagonal Sum: " + mainDiagonalSum);
                 System.out.println("Secondary Diagonal Sum: " + secondaryDiagonalSum);
             }
         }catch (Exception e) {
-        System.out.println("User input is not a numer.");
+        System.out.println("User input is not a number.");
     }            
     }
     
