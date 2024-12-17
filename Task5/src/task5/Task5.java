@@ -34,6 +34,8 @@ public class Task5 {
                 for(int i=0; i<size; i++){
                     array[i] = sc.nextInt();
                 }
+                System.out.println();
+                System.out.println("Input array: ");
                 for (int i=0; i<size; i++){
                     System.out.print(array[i]+" ");
                 }
@@ -52,10 +54,13 @@ public class Task5 {
                     }  
                 }
                 System.out.println("Number of Swaps are: " + swapNum);
-                System.out.print("Sorted array: ");
+                System.out.println();
+                
+                System.out.print("Sorted array is: ");
                 for (int i=0; i<size; i++){
                     System.out.print(array[i] + " ");
                 }
+                System.out.println();
             }
         }catch (Exception e) {
         System.out.println("User input is not a number.");
