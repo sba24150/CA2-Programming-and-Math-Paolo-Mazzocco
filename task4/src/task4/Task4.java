@@ -30,7 +30,7 @@ public class Task4 {
                             }else{
                 // Initialize the square matrix
                 int[][] matrix = new int[row][col];
-                int [][] spiral = new int [row][col];
+                
                 // Input elements row by row
                 System.out.println("Enter elements :");
 
@@ -50,9 +50,9 @@ public class Task4 {
                 System.out.print("Spiral traversal of the matrix : " );
                 // definig the 4 starting point from where the loop will start at time 
                 int top = 0;// top row of the matrix
-                int bottom = col - 1;// bottom row of the matrix
+                int bottom = row - 1;// bottom row of the matrix
                 int left = 0;//left column of the matrix
-                int right = row-1;// right column of the matrix
+                int right = col-1;// right column of the matrix
                 // the spiral will go from left to right on the first row
 
                 while (left<=right && top<=bottom){
