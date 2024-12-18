@@ -4,6 +4,7 @@
  */
 package task.pkg1;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -17,41 +18,62 @@ public class Task1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("hello");
+        //Github link below
+        //https://github.com/sba24150/CA2-Programming-and-Math-Paolo-Mazzocco
         
-        
+        System.out.println("Hello");
+
         Scanner sc = new Scanner(System.in); // Its create object of scanner class
-        try{
-            
+        try {
+            int size = 0;
+
             // Input size of the square matrix
-            System.out.print("Enter size of the Array: ");
-            int size = sc.nextInt();// we use sc to access function of scanner class.Here function is nextint
-            boolean found = false;
-            int [] array = new int [size];
-            if (size<=0){
-                System.out.println("Entered number not valid ");
-                }else{
-                System.out.println("Enter elements :");
-
-                for(int i=0; i<size; i++){
-                    array[i] = sc.nextInt();
-                }
-
-                for (int i=0; i<array.length ; i++ ){
-                    for (int j = i+1; j<array.length; j++){
-                        if (array[i]== array[j]){
-                            System.out.println("repeted number: " + array[i] );
-                            found = true;
-                        }
+            while (true) {
+                try {
+                    // Input size of the square matrix
+                    System.out.print("Enter size of the array: ");
+                    size = sc.nextInt();// we use sc to access function of scanner class.Here function is nextint
+                    if (size <= 0) {
+                        System.out.println("Entered number not valid must be greater than 0 ");
+                    } else {
+                        break;
                     }
+                } catch (InputMismatchException e) {
+                    System.out.println("Invalid data type, enter a valid number");
+                    sc.nextLine();
+                }
+            }
 
+            int[] array = new int[size];
+            System.out.println("Enter element of the array");
+
+            for (int i = 0; i < size; i++) {
+                while (true) {
+                    try {
+                        array[i] = sc.nextInt();
+                        break;
+                    } catch (InputMismatchException e) {
+                        System.out.println("Invalid data type, enter a valid number");
+                        sc.nextLine();
+                    }
                 }
-                if (found == false)
-                    System.out.println("no repeted number found");
+            }
+            boolean found = false;
+            for (int i = 0; i < array.length; i++) {
+                for (int j = i + 1; j < array.length; j++) {
+                    if (array[i] == array[j]) {
+                        System.out.println("repeted number: " + array[i]);
+                        found = true;
+                    }
                 }
-        }catch (Exception e) {
-        System.out.println("User input is not a number.");
-    }
+
+            }
+            if (found == false) {
+                System.out.println("no repeted number found");
+            }
+        } catch (Exception e) {
+            System.out.println("An error occurred: " + e.getMessage());
+        }
     }// if you input the same number for all the time it will print a lot of time the same number 
-    
+
 }
