@@ -20,15 +20,15 @@ public class Task5 {
         // TODO code application logic here
         //Github link below
         //https://github.com/sba24150/CA2-Programming-and-Math-Paolo-Mazzocco
-        
+
         System.out.println("Hello");
 
         Scanner sc = new Scanner(System.in); // Its create object of scanner class
 
         try {
             // Input size of the square matrix
-            int size;
-            while (true) {
+            int size = 0;
+            while (size <= 0) {
                 try {
                     // Input size of the square matrix
                     System.out.print("Enter size of the array: ");
@@ -49,14 +49,12 @@ public class Task5 {
             System.out.println("Enter elements :");
 
             for (int i = 0; i < size; i++) {
-                while (true) {
-                    try {
-                        array[i] = sc.nextInt();
-                        break;
-                    } catch (InputMismatchException e) {
-                        System.out.println("Invalid data type, enter a valid number");
-                        sc.nextLine();
-                    }
+                try {
+                    array[i] = sc.nextInt();
+                } catch (InputMismatchException e) {
+                    System.out.println("Invalid data type, enter a valid number");
+                    i--;
+                    sc.nextLine();
                 }
             }
             System.out.println();

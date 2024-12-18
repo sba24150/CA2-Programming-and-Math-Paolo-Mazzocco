@@ -20,15 +20,15 @@ public class Task2 {
         // TODO code application logic here
         //Github link below
         //https://github.com/sba24150/CA2-Programming-and-Math-Paolo-Mazzocco
-        
+
         System.out.println("Hello");
 
         Scanner sc = new Scanner(System.in);
         try {
 
-            int size;
+            int size = 0;
 
-            while (true) {
+            while (size <= 0) {
                 try {
                     // Input size of the square matrix
                     System.out.println("Enter the size of the table :");

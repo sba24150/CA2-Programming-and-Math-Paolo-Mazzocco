@@ -26,11 +26,11 @@ public class Task3 {
         // sc is object of scanner class
         Scanner sc = new Scanner(System.in); // Its create object of scanner class
         try {
-            int size;
-            while (true) {
+            int size = 0;
+            while (size <= 0) {
                 try {
                     // Input size of the square matrix
-                    System.out.println("Enter the size of the suare matrix :");
+                    System.out.println("Enter the size of the square matrix :");
                     size = sc.nextInt();// we use sc to access function of scanner class.Here function is nextint
                     if (size <= 0) {
                         System.out.println("Entered number not valid must be greater than 0 ");

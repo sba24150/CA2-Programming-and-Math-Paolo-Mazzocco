@@ -27,7 +27,7 @@ public class Task4 {
         try {
             int row = 0;
             int col = 0;
-            while (true) {
+            while (row <= 0) {
                 try {
                     // Input size of the square matrix
                     System.out.print("Enter size of the row matrix: ");
@@ -42,7 +42,7 @@ public class Task4 {
                     sc.nextLine();
                 }
             }
-            while (true) {
+            while (col <= 0) {
                 try {
                     // Input size of the square matrix
                     System.out.print("Enter size of the colomn matrix: ");
