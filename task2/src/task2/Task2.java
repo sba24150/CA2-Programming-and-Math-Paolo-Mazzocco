@@ -16,10 +16,11 @@ public class Task2 {
     /**
      * @param args the command line arguments
      */
+    //Github link below
+    //https://github.com/sba24150/CA2-Programming-and-Math-Paolo-Mazzocco
     public static void main(String[] args) {
         // TODO code application logic here
-        //Github link below
-        //https://github.com/sba24150/CA2-Programming-and-Math-Paolo-Mazzocco
+        
 
         System.out.println("Hello");
 
@@ -45,7 +46,7 @@ public class Task2 {
             }
 
             int[][] matrix = new int[size][size];
-
+            
             for (int i = 0; i < size; i++) {
                 for (int j = 0; j < size; j++) {
                     matrix[i][j] = (i + 1) * (j + 1);
@@ -57,7 +58,7 @@ public class Task2 {
                     System.out.print(matrix[i][j] + " ");
 
                 }
-                System.out.println(" ");// it is not pinting the lines ma every single number
+                System.out.println(" ");
             }
 
         } catch (Exception e) {

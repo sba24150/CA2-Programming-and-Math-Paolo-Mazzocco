@@ -16,6 +16,8 @@ public class Task3 {
     /**
      * @param args the command line arguments
      */
+    //Github link below
+    //https://github.com/sba24150/CA2-Programming-and-Math-Paolo-Mazzocco
     public static void main(String[] args) {
         // TODO code application logic here
         //Github link below

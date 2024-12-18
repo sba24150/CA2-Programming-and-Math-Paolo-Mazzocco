@@ -16,10 +16,11 @@ public class Task1 {
     /**
      * @param args the command line arguments
      */
+    //Github link below
+    //https://github.com/sba24150/CA2-Programming-and-Math-Paolo-Mazzocco
     public static void main(String[] args) {
         // TODO code application logic here
-        //Github link below
-        //https://github.com/sba24150/CA2-Programming-and-Math-Paolo-Mazzocco
+        
 
         System.out.println("Hello");
 
@@ -56,6 +57,8 @@ public class Task1 {
                     sc.nextLine();
                 }
             }
+            //Check if the the index of the first loop is the same number of the index of the second loop
+            //Introduced "find" variable to avoid to display te same number repeded more then once
             boolean found = false;
             boolean find = false;
             for (int i = 0; i < array.length; i++) {

@@ -16,10 +16,11 @@ public class Task5 {
     /**
      * @param args the command line arguments
      */
+    //Github link below
+    //https://github.com/sba24150/CA2-Programming-and-Math-Paolo-Mazzocco
     public static void main(String[] args) {
         // TODO code application logic here
-        //Github link below
-        //https://github.com/sba24150/CA2-Programming-and-Math-Paolo-Mazzocco
+        
 
         System.out.println("Hello");
 
@@ -66,11 +67,12 @@ public class Task5 {
             boolean swap = true;
             while (swap) {
                 swap = false;
+                //this loop check if the number of index i is greater than the following number
                 for (int i = 0; i < size - 1; i++) {
                     if (array[i] > array[i + 1]) {
                         swap = true;
-                        swapNum++;
-                        int temp = array[i];
+                        swapNum++;//implementing the swap count
+                        int temp = array[i];//create a temporary value to store the number to swap
                         array[i] = array[i + 1];
                         array[i + 1] = temp;
                     }
