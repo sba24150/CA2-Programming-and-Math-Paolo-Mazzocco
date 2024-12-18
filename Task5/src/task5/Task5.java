@@ -35,16 +35,16 @@ public class Task5 {
                     System.out.print("Enter size of the array: ");
                     size = sc.nextInt();// we use sc to access function of scanner class.Here function is nextint
                     if (size <= 0) {
-                        System.out.println("Entered number not valid must be greater than 0 ");
+                        System.out.println("Entered number not valid must be greater than 0 ");//If the number is 0 or less, it will trow the message
                     } else {
-                        break;
+                        break;//If the number is grether than 0 it will go out of the while loop
                     }
                 } catch (InputMismatchException e) {
-                    System.out.println("Invalid data type, enter a valid number");
+                    System.out.println("Invalid data type, enter a valid number");//In the case the input is not a valid type it will trow the message
                     sc.nextLine();
                 }
             }
-            int swapNum = 0;
+            int swapNum = 0;//Number of swaps
             int[] array = new int[size];
 
             System.out.println("Enter elements :");
@@ -53,7 +53,7 @@ public class Task5 {
                 try {
                     array[i] = sc.nextInt();
                 } catch (InputMismatchException e) {
-                    System.out.println("Invalid data type, enter a valid number");
+                    System.out.println("Invalid data type, enter a valid number");//In the case the input is not a valid type it will trow the message
                     i--;
                     sc.nextLine();
                 }
@@ -61,7 +61,7 @@ public class Task5 {
             System.out.println();
             System.out.println("Input array: ");
             for (int i = 0; i < size; i++) {
-                System.out.print(array[i] + " ");
+                System.out.print(array[i] + " ");//This will display the input number on a single line 
             }
             System.out.println(" ");
             boolean swap = true;

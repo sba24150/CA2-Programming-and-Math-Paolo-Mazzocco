@@ -35,12 +35,12 @@ public class Task1 {
                     System.out.print("Enter size of the array: ");
                     size = sc.nextInt();// we use sc to access function of scanner class.Here function is nextint
                     if (size <= 0) {
-                        System.out.println("Entered number not valid must be greater than 0 ");
+                        System.out.println("Entered number not valid must be greater than 0 ");//If the number is 0 or less, it will trow the message
                     } else {
-                        break;
+                        break;//If the number is grether than 0 it will go out of the while loop
                     }
                 } catch (InputMismatchException e) {
-                    System.out.println("Invalid data type, enter a valid number");
+                    System.out.println("Invalid data type, enter a valid number");//In the case the input is not a valid type it will trow the message
                     sc.nextLine();
                 }
             }
@@ -67,6 +67,7 @@ public class Task1 {
                     if (array[i] == array[j]) {
                         System.out.println("repeted number: " + array[i]);
                         found = true;
+                        find = true;
                     }
                 }
 
@@ -77,6 +78,6 @@ public class Task1 {
         } catch (Exception e) {
             System.out.println("An error occurred: " + e.getMessage());
         }
-    }// if you input the same number for all the time it will print a lot of time the same number 
+    }
 
 }

@@ -35,12 +35,12 @@ public class Task3 {
                     System.out.println("Enter the size of the square matrix :");
                     size = sc.nextInt();// we use sc to access function of scanner class.Here function is nextint
                     if (size <= 0) {
-                        System.out.println("Entered number not valid must be greater than 0 ");
+                        System.out.println("Entered number not valid must be greater than 0 ");//If the number is 0 or less, it will trow the message
                     } else {
-                        break;
+                        break;//If the number is grether than 0 it will go out of the while loop
                     }
                 } catch (InputMismatchException e) {
-                    System.out.println("Invalid data type, enter a valid number");
+                    System.out.println("Invalid data type, enter a valid number");//In the case the input is not a valid type it will trow the message
                     sc.nextLine();
                 }
             }

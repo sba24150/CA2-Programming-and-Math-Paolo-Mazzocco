@@ -34,12 +34,12 @@ public class Task4 {
                     System.out.print("Enter size of the row matrix: ");
                     row = sc.nextInt();// we use sc to access function of scanner class.Here function is nextint
                     if (row <= 0) {
-                        System.out.println("Entered number not valid must be greater than 0 ");
+                        System.out.println("Entered number not valid must be greater than 0 ");//If the number is 0 or less, it will trow the message
                     } else {
-                        break;
+                        break;//If the number is grether than 0 it will go out of the while loop
                     }
                 } catch (InputMismatchException e) {
-                    System.out.println("Invalid data type, enter a valid number");
+                    System.out.println("Invalid data type, enter a valid number");//In the case the input is not a valid type it will trow the message
                     sc.nextLine();
                 }
             }
@@ -49,12 +49,12 @@ public class Task4 {
                     System.out.print("Enter size of the colomn matrix: ");
                     col = sc.nextInt();// we use sc to access function of scanner class.Here function is nextint
                     if (col <= 0) {
-                        System.out.println("Entered number not valid must be greater than 0 ");
+                        System.out.println("Entered number not valid must be greater than 0 ");//If the number is 0 or less, it will trow the message
                     } else {
-                        break;
+                        break;//If the number is grether than 0 it will go out of the while loop
                     }
                 } catch (InputMismatchException e) {
-                    System.out.println("Invalid data type, enter a valid number");
+                    System.out.println("Invalid data type, enter a valid number");//In the case the input is not a valid type it will trow the message
                     sc.nextLine();
                 }
             }
@@ -70,7 +70,7 @@ public class Task4 {
                     while (true) {
                         try {
                             matrix[i][j] = sc.nextInt();
-                            break;
+                            break;//It will break the loop whenever the function ends
                         } catch (InputMismatchException e) {
                             System.out.println("Invalid data type, enter a valid number");
                             sc.nextLine();
@@ -99,14 +99,14 @@ public class Task4 {
                     System.out.print(matrix[top][i]);
                     System.out.print(" ");
                 }
-                top++;
+                top++;//It will prevent to read the first row again
 
                 //top to bottom right column
                 for (int i = top; i <= bottom; i++) {
                     System.out.print(matrix[i][right]);
                     System.out.print(" ");
                 }
-                right--;
+                right--;//It will prevent to read the right column again
 
                 //right to left
                 if (top <= bottom) {
@@ -114,7 +114,7 @@ public class Task4 {
                         System.out.print(matrix[bottom][i]);
                         System.out.print(" ");
                     }
-                    bottom--;
+                    bottom--;//It will prevent to read the bottom row again
                 }
                 //bottom to top
                 if (left <= right) {
@@ -122,7 +122,7 @@ public class Task4 {
                         System.out.print(matrix[i][left]);
                         System.out.print(" ");
                     }
-                    left++;
+                    left++;//It will prevent to read the left column again
                 }
             }
         } catch (Exception e) {
