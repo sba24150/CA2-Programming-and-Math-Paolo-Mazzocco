@@ -28,7 +28,7 @@ public class Task1 {
             int size = 0;
 
             // Input size of the square matrix
-            while (true) {
+            while (size<=0) {
                 try {
                     // Input size of the square matrix
                     System.out.print("Enter size of the array: ");
@@ -59,8 +59,10 @@ public class Task1 {
                 }
             }
             boolean found = false;
+            boolean find = false;
             for (int i = 0; i < array.length; i++) {
-                for (int j = i + 1; j < array.length; j++) {
+                find = false;
+                for (int j = i + 1; j < array.length && !find; j++) {
                     if (array[i] == array[j]) {
                         System.out.println("repeted number: " + array[i]);
                         found = true;
