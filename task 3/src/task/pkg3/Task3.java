@@ -18,11 +18,10 @@ public class Task3 {
      */
     //Github link below
     //https://github.com/sba24150/CA2-Programming-and-Math-Paolo-Mazzocco
+    //Paolo Mazzocco sba24150
     public static void main(String[] args) {
         // TODO code application logic here
-        //Github link below
-        //https://github.com/sba24150/CA2-Programming-and-Math-Paolo-Mazzocco
-
+        
         System.out.println("Hello");
 
         // sc is object of scanner class
